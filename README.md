@@ -1,4 +1,4 @@
-# csi3140_playground
-CSI3140 Labs (1)
+# csi3140
+CSI3140 Project
 
 This is the first commit to branch readme-edits
