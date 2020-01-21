@@ -1,4 +1,8 @@
 # csi3140
 CSI3140 Project
+Trevor Siu 7866981
 
-This is the first commit to branch readme-edits
+Project description
+
+Topic:
+Personal Budget Application
