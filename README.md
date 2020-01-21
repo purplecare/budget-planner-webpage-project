@@ -7,7 +7,7 @@
 | Name       | Student Number | Student E-mail    |
 |------------|----------------|-------------------|
 | Simon Fu   | 8265708        | sfu013@uottawa.ca |
-| Trevor Siu | 7866981        |                   |
+| Trevor Siu | 7866981        | tsiu086@uottawa.ca|
 
 
 ### Project Description
