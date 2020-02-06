@@ -1,18 +1,20 @@
 :root{
   --nav_backgroundcolor1:rgb(247, 246, 243);
-  --main_backgroundcolor2:rgb(193, 255, 246);
-  --category_food_light: rgb(251, 194, 161);
+  --main_backgroundcolor:rgb(230, 255, 247);
+  --main_backgroundcolor_accent: rgb(128, 255, 212);
+  --category_food_light: rgb(252, 207, 182);
   --category_food_dark:rgb(216, 113, 53);
-  --category_transportation_light: rgb(117, 228, 228);
-  --category_transportation_dark:rgb(51, 153, 153);
-  --category_ultilities_light: rgb(117, 193, 228);
+  --category_transportation_light: rgb(223, 159, 223);
+  --category_transportation_dark:rgb(153, 51, 153);
+  --category_ultilities_light: rgb(169, 217, 239);
   --category_ultilities_dark:rgb(39, 152, 205);
-  --category_entertainment_light: rgb(251, 194, 161);
-  --category_entertainment_dark:rgb(216, 113, 53);
-  --category_living_light: rgb(251, 194, 161);
-  --category_living_dark: rgb(251, 194, 161);
-
-
+  --category_entertainment_light: rgb(255, 153, 194);
+  --category_entertainment_dark:rgb(179, 0, 71);
+  --category_living_light: rgb(153, 255, 204);
+  --category_living_dark:rgb(0, 179, 89);
+  --history_good_budget:rgb(92, 184, 92);
+  --history_modify_budget:rgb(204, 163, 0);
+  --history_bad_budget:rgb(255, 0, 0);
 }
 
 body {
@@ -92,6 +94,6 @@ li a {
 
 .nav-tab{
   padding:20px;
-  height: 100%;
-  background-color:var(--main_backgroundcolor2);
+  height: 100vh;
+  background-color:var(--main_backgroundcolor);
 }

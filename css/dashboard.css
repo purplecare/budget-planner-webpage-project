@@ -1,12 +1,8 @@
-.category-food{
-  background-color: var(--category_food_light);
+.category-food,.category-transportation,.category-ultilities,.category-entertainment,.category-living{
+
+  margin-top: 10px;
 }
-.category-transportation{
-  background-color: var(--category_transportation_light);
-}
-.category-ultilities{
-  background-color: var(--category_ultilities_light);
-}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12,1fr);
@@ -25,10 +21,10 @@
   background-color: var(--category_ultilities_dark);
 }
 .category-entertainment .category-text {
-  background-color: var(--category_ultilities_dark);
+  background-color: var(--category_entertainment_dark);
 }
 .category-living .category-text {
-  background-color: var(--category_ultilities_dark);
+  background-color: var(--category_living_dark);
 }
 .category-text {
   text-align: left;
@@ -38,52 +34,75 @@
   font-size: 30px;
   padding-left:10px;
   padding-top: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+.category-food .budget-amount, .category-food .amount-spent, .category-food .budget-left{
+  border-color: var(--category_food_dark);
+  background-color: var(--category_food_light);
+}
+.category-transportation .budget-amount, .category-transportation .amount-spent, .category-transportation .budget-left{
+  border-color: var(--category_transportation_dark);
+  background-color: var(--category_transportation_light);
+}
+.category-ultilities .budget-amount, .category-ultilities .amount-spent, .category-ultilities .budget-left{
+  border-color: var(--category_ultilities_dark);
+  background-color: var(--category_ultilities_light);
+}
+.category-entertainment .budget-amount, .category-entertainment .amount-spent, .category-entertainment .budget-left{
+  border-color: var(--category_entertainment_dark);
+  background-color: var(--category_entertainment_light);
+}
+.category-living .budget-amount, .category-living .amount-spent, .category-living .budget-left{
+  border-color: var(--category_living_dark);
+  background-color: var(--category_living_light);
 }
 .budget-amount,.amount-spent,.budget-left{
   text-align: center;
   font-size: 10px;
+  font-weight: bold;
   padding-top:10px;
   background-color: white;
-  border-style: solid;
-  border-width: 10px;
-  border-color: black;
   padding-right: 10px;
-
-
+  border-style: solid;
 }
 .budget-amount{
   grid-column-start:7;
   grid-column-end: 9;
   font-size: 15px;
   bottom: 0px;
-  text-align: right;
-
+  border-width: 5px 0px 5px 5px;
 }
 
 .amount-spent{
-  text-align: right;
   grid-column-start: 9;
   grid-column-end: 11;
   font-size: 15px;
-
+  background-color: var(--category_food_light);
+  border-width: 5px 0px 5px 0px;
 }
 .budget-left{
-  text-align: right;
   grid-column-start: 11;
   grid-column-end: 13;
   font-size: 15px;
-
-
+  border-width: 5px 5px 5px 0px;
+  border-radius: 0px 10px 10px 0px;
 }
 .dashboard_row_items {
   width:100%;
   text-align: center;
+  border-collapse: collapse;
+}
+.dashboard_row_items tr:not(:first-child){
+  border-bottom: 1px solid grey;
+}
+.dashboard_row_items tr:not(:first-child):hover{
+  background-color: var(--main_backgroundcolor_accent);
 }
 select{
   font-size: 15px;
 }
 input[type=submit]{
-  font-size: 30px;
+  font-size: 1em;
 }
 form{
   margin-bottom: 10px;
