@@ -1,3 +1,10 @@
+:root{
+  --nav_backgroundcolor1:rgb(247, 246, 243);
+  --main_backgroundcolor2:rgb(193, 255, 246);
+  --category_food_light: rgb(251, 194, 161);
+  --category_food_dark:rgb(216, 113, 53);
+}
+
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
@@ -10,7 +17,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(247, 246, 243);
+  background-color: var(--nav_backgroundcolor1);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -70,4 +77,42 @@ li a {
 
 .sidenav a.active:hover {
   cursor: default;
+}
+
+.nav-tab{
+  padding:20px;
+  margin-top:30px;
+  background-color:var(--main_backgroundcolor2);
+  height:1500px;
+}
+.category-food{
+  background-color: var(--category_food_light);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.item2{
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.dashboard_row_items {
+  width:50%;
+  text-align: center;
 }
