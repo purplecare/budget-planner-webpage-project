@@ -9,14 +9,17 @@
     <meta name="keywords" content="Budget Application">
     <meta name="author" content="Simon Fu and Trevor Siu">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
     </head>
 <body>
+  <!--
   <ul>
     <li><a href="#this">This</a></li>
     <li><a href="#content">Content</a></li>
     <li><a href="#will">Will</a></li>
     <li><a href="#change">Change</a></li>
-  </ul>
+  </ul>-->
   <div class="sidenav">
     <a class="active">Dashboard</a>
     <hr>
@@ -29,13 +32,29 @@
 
   <div class="main">
     <div class="nav-tab">
-    <h1>Dashboard</h1>
+
+      <h1>Dashboard</h1>
+      <h2>Sept, 2019</h1>
+      <form>
+        Category:
+        <select>
+          <option value="Food">Food</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Ultilities">Ultilities</option>
+          <option value="Entertainment">Entertainment</option>
+        </select>
+        Item Name:
+        <input type="text" name="Items" value="Uber">
+        Amount:
+        <input type="number" name="Amount" value="20.05">
+        <input type="submit" value="Add new items">
+      </form>
     <div class="category-food">
       <div class="grid-container">
-        <div class="item1">Food</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
+        <div class="category-text">Food</div>
+        <div class="budget-amount">Budget amount: 200</div>
+        <div class="amount-spent">Amount spent: 200</div>
+        <div class="budget-left">Budget left: 200</div>
 
       </div>
 
@@ -54,10 +73,10 @@
     </div>
     <div class="category-transportation">
       <div class="grid-container">
-        <div class="item1">Transportation</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
+        <div class="category-text">Transportation</div>
+        <div class="budget-amount">Budget amount: 200</div>
+        <div class="amount-spent">Amount spent: 200</div>
+        <div class="budget-left">Budget left: 200</div>
 
       </div>
 
@@ -76,10 +95,10 @@
     </div>
     <div class="category-ultilities">
       <div class="grid-container">
-        <div class="item1">Utilities</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
+        <div class="category-text">Utilities</div>
+        <div class="budget-amount">Budget amount: 200</div>
+        <div class="amount-spent">Amount spent: 200</div>
+        <div class="budget-left">Budget left: 200</div>
 
       </div>
 
@@ -98,10 +117,10 @@
     </div>
     <div class="category-entertainment">
       <div class="grid-container">
-        <div class="item1">Entertainment</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
+        <div class="category-text">Entertainment</div>
+        <div class="budget-amount">Budget amount: 200</div>
+        <div class="amount-spent">Amount spent: 200</div>
+        <div class="budget-left">Budget left: 200</div>
 
       </div>
 
@@ -118,34 +137,12 @@
         </tr>
       </table>
     </div>
-    <div class="category-Housing">
+    <div class="category-living">
       <div class="grid-container">
-        <div class="item1">Living expense</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <tr>
-          <td>Week 1 grocery</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Dinner at Joey</td>
-          <td>60</td>
-        </tr>
-      </table>
-    </div>
-    <div class="category-transportation">
-      <div class="grid-container">
-        <div class="item1">Transportation</div>
-        <div class="item2">Budget amount: 200</div>
-        <div class="item3">Amount spent: 200</div>
-        <div class="item4">Budget left: 200</div>
+        <div class="category-text">Living expense</div>
+        <div class="budget-amount">Budget amount: 200</div>
+        <div class="amount-spent">Amount spent: 200</div>
+        <div class="budget-left">Budget left: 200</div>
 
       </div>
 

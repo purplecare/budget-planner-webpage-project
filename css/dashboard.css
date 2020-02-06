@@ -1,0 +1,90 @@
+.category-food{
+  background-color: var(--category_food_light);
+}
+.category-transportation{
+  background-color: var(--category_transportation_light);
+}
+.category-ultilities{
+  background-color: var(--category_ultilities_light);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: minmax(50px,50px);
+  grid-gap: 0px;
+}
+
+.category-food .category-text{
+  background-color: var(--category_food_dark);
+}
+
+.category-transportation .category-text {
+  background-color: var(--category_transportation_dark);
+}
+.category-ultilities .category-text {
+  background-color: var(--category_ultilities_dark);
+}
+.category-entertainment .category-text {
+  background-color: var(--category_ultilities_dark);
+}
+.category-living .category-text {
+  background-color: var(--category_ultilities_dark);
+}
+.category-text {
+  text-align: left;
+  color: white;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  font-size: 30px;
+  padding-left:10px;
+  padding-top: 10px;
+}
+.budget-amount,.amount-spent,.budget-left{
+  text-align: center;
+  font-size: 10px;
+  padding-top:10px;
+  background-color: white;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  padding-right: 10px;
+
+
+}
+.budget-amount{
+  grid-column-start:7;
+  grid-column-end: 9;
+  font-size: 15px;
+  bottom: 0px;
+  text-align: right;
+
+}
+
+.amount-spent{
+  text-align: right;
+  grid-column-start: 9;
+  grid-column-end: 11;
+  font-size: 15px;
+
+}
+.budget-left{
+  text-align: right;
+  grid-column-start: 11;
+  grid-column-end: 13;
+  font-size: 15px;
+
+
+}
+.dashboard_row_items {
+  width:100%;
+  text-align: center;
+}
+select{
+  font-size: 15px;
+}
+input[type=submit]{
+  font-size: 30px;
+}
+form{
+  margin-bottom: 10px;
+}
