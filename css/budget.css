@@ -1,0 +1,85 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: minmax(50px,50px);
+  grid-gap: 0px;
+}
+.category-food,.category-transportation,.category-ultilities,.category-entertainment,.category-living{
+  margin-top: 10px;
+}
+
+.category-food .category-text{
+  background-color: var(--category_food_dark);
+}
+
+.category-transportation .category-text {
+  background-color: var(--category_transportation_dark);
+}
+.category-ultilities .category-text {
+  background-color: var(--category_ultilities_dark);
+}
+.category-entertainment .category-text {
+  background-color: var(--category_entertainment_dark);
+}
+.category-living .category-text {
+  background-color: var(--category_living_dark);
+}
+.category-text {
+  text-align: left;
+  color: white;
+  grid-column-start: 1;
+  grid-column-end: 9;
+  font-size: 30px;
+  padding-left:10px;
+  padding-top: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+.category-food .budget-amount{
+  border-color: var(--category_food_dark);
+  background-color: var(--category_food_light);
+}
+
+.category-transportation .budget-amount {
+  border-color: var(--category_transportation_dark);
+  background-color: var(--category_transportation_light);
+}
+.category-ultilities .budget-amount {
+  border-color: var(--category_ultilities_dark);
+  background-color: var(--category_ultilities_light);
+}
+.category-entertainment .budget-amount {
+  border-color: var(--category_entertainment_dark);
+  background-color: var(--category_entertainment_light);
+}
+.category-living .budget-amount {
+  border-color: var(--category_living_dark);
+  background-color: var(--category_living_light);
+}
+.budget-amount{
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top:10px;
+  border-style: solid;
+  border-width:5px;
+  border-color: var(--category_food_dark);
+  padding-right: 10px;
+  grid-column-start:9;
+  grid-column-end: 13;
+  font-size: 15px;
+  bottom: 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+.amount-input{
+  margin-left: 10px;
+}
+.monthly-payments table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.monthly-payments th{
+  text-align: left;
+}
+.monthly-payments tr:not(:first-child):not(.add-new-item-row){
+  border-bottom: 1px solid grey;
+}

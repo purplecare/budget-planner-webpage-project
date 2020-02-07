@@ -2,7 +2,8 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 95%;
   border-radius: 5px;
-  background-color: white;
+  background-color: rgb(240, 240, 240)
+;
   margin-left: 20px;
 }
 
@@ -31,14 +32,13 @@
 }
 
 .green {
-	color: #5cb85c;
+	color: var(--history_good_budget);
 }
 
 .yellow {
-	color: #FDE541;
+	color:var(--history_modify_budget);
 }
 
 .red {
-	color: red;
+	color: var(--history_bad_budget);
 }
-
