@@ -42,5 +42,8 @@ We will be building a **Personal Budget Web Application** that will allow users 
 ### Color Palette
 
 ### Fonts, Type Scale, and Icons
+For our font choices, we decided to choose fonts that are easy to read. In CSS, we are able to set priority as to which fonts we want, and also specify a more compatible backup fonts. Fonts that are easy to read eliminates any unnecessary strokes from a character and also makes for a more minimalistic look.
+We decided to use Font Awesome as our choice for Icons. Font Awesome is a very popular css toolkit that allows us to create specific icons with ease. Using a standardized tool like Font Awesome is preferred over creating custom icons due to the fact that users will be able to easily recognize the potential meaning of an Icon. For example, people often associate a caret right icon with being clickable, and would invoke a dropdown or expanding of some sort to appear. We try to be as consistent as we can with our choices.
+Type Scale decisions were made to bring focus to various sections as titles and headers are given larger font sizes to easier catch the eye and indicate its purpose.
 
 ### General UI Components Strategy
