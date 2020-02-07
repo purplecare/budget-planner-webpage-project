@@ -40,7 +40,7 @@ We will be building a **Personal Budget Web Application** that will allow users 
 ## UI Design Document 
 
 ### Color Palette
-Our color palette is made up of three main colors, being a main darker shade of green (rgb(247, 246, 243)), a sub-lighter shade of green (rgb(230, 255, 247)), and white. When choosing a theme, we want to minimize the amount of colors as well as conflicting colors. This is why we decided to stay with different shades of the same color for our theme. Having an abundance of white background that contains the majority of the text information allows for a more balanced color palette and better readability, followed by the traces of green throughout the pages that would define our application.
+Our [color palette](css/style.css) is made up of three main colors, being a main darker shade of green (rgb(247, 246, 243)), a sub-lighter shade of green (rgb(230, 255, 247)), and white. When choosing a theme, we want to minimize the amount of colors as well as conflicting colors. This is why we decided to stay with different shades of the same color for our theme. Having an abundance of white background that contains the majority of the text information allows for a more balanced color palette and better readability, followed by the traces of green throughout the pages that would define our application.
 
 ### Fonts, Type Scale, Icons, and Form Elements
 For our font choices, we decided to choose fonts that are easy to read. In CSS, we are able to set priority as to which fonts we want, and also specify a more compatible backup fonts. Fonts that are easy to read eliminates any unnecessary strokes from a character and also makes for a more minimalistic look.
