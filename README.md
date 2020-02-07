@@ -42,9 +42,11 @@ We will be building a **Personal Budget Web Application** that will allow users 
 ### Color Palette
 Our color palette is made up of three main colors, being a main darker shade of green (rgb(247, 246, 243)), a sub-lighter shade of green (rgb(230, 255, 247)), and white. When choosing a theme, we want to minimize the amount of colors as well as conflicting colors. This is why we decided to stay with different shades of the same color for our theme. Having an abundance of white background that contains the majority of the text information allows for a more balanced color palette and better readability, followed by the traces of green throughout the pages that would define our application.
 
-### Fonts, Type Scale, and Icons
+### Fonts, Type Scale, Icons, and Form Elements
 For our font choices, we decided to choose fonts that are easy to read. In CSS, we are able to set priority as to which fonts we want, and also specify a more compatible backup fonts. Fonts that are easy to read eliminates any unnecessary strokes from a character and also makes for a more minimalistic look.
 We decided to use Font Awesome as our choice for Icons. Font Awesome is a very popular css toolkit that allows us to create specific icons with ease. Using a standardized tool like Font Awesome is preferred over creating custom icons due to the fact that users will be able to easily recognize the potential meaning of an Icon. For example, people often associate a caret right icon with being clickable, and would invoke a dropdown or expanding of some sort to appear. We try to be as consistent as we can with our choices.
 Type Scale decisions were made to bring focus to various sections as titles and headers are given larger font sizes to easier catch the eye and indicate its purpose.
+Form Elements are enlarged and styled more than its default appearance to allow users to have a better visual of the fields and any relevant information.
 
 ### General UI Components Strategy
+Our strategy is to create a style that is very minimalistic/easy to look at. We want to follow web standards and techniques that will overall improve the User Experience/Interface
