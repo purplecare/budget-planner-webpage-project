@@ -2,8 +2,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 95%;
   border-radius: 5px;
-  background-color: rgb(240, 240, 240)
-;
+  background-color: white;
   margin-left: 20px;
 }
 
@@ -20,11 +19,15 @@
 
 .row:hover {
 	cursor: pointer;
-	background-color: #fafafa;
+	background-color:var(--main_backgroundcolor_accent)
 }
 
 .row p {
 	padding-left: 15px;
+}
+
+.row p span span {
+  margin-right: 20px;
 }
 
 .italic {

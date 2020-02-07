@@ -6,7 +6,7 @@
 .settings-style-heading{
 	font-weight: bold;
 	font-style: italic;
-	border-bottom: 1.5px solid #ddd;
+	border-bottom: 1.5px solid var(--main_backgroundcolor);
 	margin-bottom: 20px;
 	font-size: 15px;
 	padding-bottom: 3px;
@@ -46,7 +46,7 @@
 .settings-style input[type=button]{
 	border: none;
 	padding: 8px 15px 8px 15px;
-	background: #FF8500;
+	background: var(--main_backgroundcolor);
 	color: #fff;
 	box-shadow: 1px 1px 4px #DADADA;
 	-moz-box-shadow: 1px 1px 4px #DADADA;
@@ -57,8 +57,8 @@
 }
 .settings-style input[type=submit]:hover,
 .settings-style input[type=button]:hover{
-	background: #EA7B00;
+	background: var(--main_backgroundcolor);
 	color: #fff;
 	cursor: pointer;
-	opacity: 0.8;
+	opacity: 0.5;
 }
