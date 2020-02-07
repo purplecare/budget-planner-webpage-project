@@ -36,3 +36,11 @@ We will be building a **Personal Budget Web Application** that will allow users 
 3. Javascript
 4. Database (TBD)
 5. RESTful API (JSON HTTP)
+
+## UI Design Document 
+
+### Color Palette
+
+### Fonts, Type Scale, and Icons
+
+### General UI Components Strategy
