@@ -17,6 +17,22 @@
   --history_bad_budget:rgb(255, 0, 0);
 }
 
+.category-food {
+  color: var(--category_food_dark);
+}
+.category-transportation {
+  color: var(--category_transportation_dark);
+}
+.category-utilities {
+  color: var(--category_ultilities_dark);
+}
+.category-entertainment {
+  color: var(--category_entertainment_dark);
+}
+.category-living {
+  color: var(--category_living_dark);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;

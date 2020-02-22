@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/history.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions-history.js"></script>
     </head>
 <body>
 <!--<ul>
@@ -29,54 +31,187 @@
 <div class="main">
   <div class="nav-tab">
   <h1>History</h1>
+  <div id="responsecontainer"></div>
   <div class="card">
-    <div class="row">
-      <p>February 6th 2020
-        <span style="float:right;font-style:">
-          <span class="yellow">1516 / 2060 (73.5%)</span>
-          <i class="fa fa-caret-right"></i>
-        </span>
-      </p>
-    </div>
     <div class="row">
       <p>February 5th 2020
         <span style="float:right;font-style:">
-          <span class="green">1030 / 2060 (50%)</span>
+          <span class="green">10 / 2060 (0.5%)</span>
           <i class="fa fa-caret-right"></i>
         </span>
       </p>
+      <div class="dropdown" style="display:none;">
+        <hr>
+        <p class="category-food">Food
+          <span style="float:right;font-style:">
+            $10
+          </span>
+        </p>
+        <p class="category-transportation">Transportation
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+        <p class="category-utilities">Utilities
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+        <p class="category-entertainment">Entertainment
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+        <p class="category-living">Living
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+      </div>
     </div>
     <div class="row">
       <p>February 4th 2020
         <span style="float:right;font-style:">
-          <span class="green">555 / 2060 (27%)</span>
+          <span class="red">235.5 / 2060 (27%)</span>
           <i class="fa fa-caret-right"></i>
         </span>
       </p>
+      <div class="dropdown" style="display:none;">
+        <hr>
+        <p class="category-food">Food
+          <span style="float:right;font-style:">
+            $25.25
+          </span>
+        </p>
+        <p class="category-transportation">Transportation
+          <span style="float:right;font-style:">
+            $10.25
+          </span>
+        </p>
+        <p class="category-utilities">Utilities
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+        <p class="category-entertainment">Entertainment
+          <span style="float:right;font-style:">
+            $200
+          </span>
+        </p>
+        <p class="category-living">Living
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+      </div>
     </div>
     <div class="row">
       <p>February 3th 2020
         <span style="float:right;font-style:">
-          <span class="yellow">1700 / 2060 (83%)</span>
+          <span class="yellow">141.41 / 2060 (83%)</span>
           <i class="fa fa-caret-right"></i>
         </span>
       </p>
+      <div class="dropdown" style="display:none;">
+        <hr>
+        <p class="category-food">Food
+          <span style="float:right;font-style:">
+            $96.31
+          </span>
+        </p>
+        <p class="category-transportation">Transportation
+          <span style="float:right;font-style:">
+            $20
+          </span>
+        </p>
+        <p class="category-utilities">Utilities
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+        <p class="category-entertainment">Entertainment
+          <span style="float:right;font-style:">
+            $25.10
+          </span>
+        </p>
+        <p class="category-living">Living
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+      </div>
     </div>
     <div class="row">
       <p>February 2th 2020
         <span style="float:right;font-style:">
-          <span class="yellow">1514 / 2060 (73.5%)</span>
+          <span class="green">115.25 / 2060 (5.4%)</span>
           <i class="fa fa-caret-right"></i>
         </span>
       </p>
+      <div class="dropdown" style="display:none;">
+        <hr>
+        <p class="category-food">Food
+          <span style="float:right;font-style:">
+            $35.25
+          </span>
+        </p>
+        <p class="category-transportation">Transportation
+          <span style="float:right;font-style:">
+            $20
+          </span>
+        </p>
+        <p class="category-utilities">Utilities
+          <span style="float:right;font-style:">
+            $50
+          </span>
+        </p>
+        <p class="category-entertainment">Entertainment
+          <span style="float:right;font-style:">
+            $10
+          </span>
+        </p>
+        <p class="category-living">Living
+          <span style="float:right;font-style:">
+            $0
+          </span>
+        </p>
+      </div>
     </div>
     <div class="row">
       <p>February 1th 2020
         <span style="float:right;font-style:">
-          <span class="red">2075 / 2060 (106.5%)</span>
+          <span class="yellow">620.56 / 2060 (30%)</span>
           <i class="fa fa-caret-right"></i>
         </span>
       </p>
+      <div class="dropdown" style="display:none;">
+        <hr>
+        <p class="category-food">Food
+          <span style="float:right;font-style:">
+            $20
+          </span>
+        </p>
+        <p class="category-transportation">Transportation
+          <span style="float:right;font-style:">
+            $30
+          </span>
+        </p>
+        <p class="category-utilities">Utilities
+          <span style="float:right;font-style:">
+            $5.31
+          </span>
+        </p>
+        <p class="category-entertainment">Entertainment
+          <span style="float:right;font-style:">
+            $15.25
+          </span>
+        </p>
+        <p class="category-living">Living
+          <span style="float:right;font-style:">
+            $550
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </div>
