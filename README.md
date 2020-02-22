@@ -50,3 +50,17 @@ Form Elements are enlarged and styled more than its default appearance to allow 
 
 ### General UI Components Strategy
 Our strategy is to create a style that is very minimalistic/easy to look at. We want to follow web standards and techniques that will overall improve the User Experience/Interface
+
+## Installation and Deployment Instructions
+
+### Database Setup
+Visit the MySQL website to [download](https://dev.mysql.com/downloads/mysql/) the latest community version. Follow the instructions to install the database.
+
+Configure your localhost server under the username root, and leave the password blank.
+
+If necessary, install the MySQL Workbench [here](https://dev.mysql.com/downloads/workbench/).
+
+Initial setup of a schema/table may be necessary (to be updated)
+
+### Deployment
+Please ensure that you are connected to the internet before your initial loading of the page, in order to fetch CDN data and have it stored into your local browser.
