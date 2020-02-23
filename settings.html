@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
     </head>
 <body>
 <!--<ul>
@@ -33,13 +35,12 @@
   <div class="account">
     <div class="settings-style">
       <div class="settings-style-heading">Modify Your Account Details</div>
-      <form action="" method="post">
-      <label for="Username"><span>Username</span><input type="text" class="input-field" name="Username" value="Simon2233" /></label>
-      <label for="Email"><span>Email</span><input type="text" class="input-field" name="Email" value="sfu013@uottawa.ca" /></label>
+      <label for="Username"><span>Username</span><input type="text" class="input-field" name="Username"/></label>
+      <label for="Email"><span>Email</span><input type="text" class="input-field" name="Email"/></label>
       <label for="Password"><span>Password</span><input type="text" class="input-field" name="Password" placeholder="********" /></label>
-      <label><span></span><input type="submit" value="Save Changes" /></label>
-      </form>
+      <label><span></span><input type="submit" value="Save Changes" onclick="$('#success').show()" /></label>
     </div>
+    <span id="success" style="font-style: italic;color: red;display: none;">Saved Successfully</span>
   </div>
 </div>
 </div>
