@@ -37,7 +37,7 @@ We will be building a **Personal Budget Web Application** that will allow users 
 4. Database (TBD)
 5. RESTful API (JSON HTTP)
 
-## UI Design Document 
+## UI Design Document
 
 ### Color Palette
 Our [color palette](css/style.css) is made up of three main colors, being a main darker shade of green (rgb(247, 246, 243)), a sub-lighter shade of green (rgb(230, 255, 247)), and white. When choosing a theme, we want to minimize the amount of colors as well as conflicting colors. This is why we decided to stay with different shades of the same color for our theme. Having an abundance of white background that contains the majority of the text information allows for a more balanced color palette and better readability, followed by the traces of green throughout the pages that would define our application.
@@ -52,7 +52,11 @@ Form Elements are enlarged and styled more than its default appearance to allow 
 Our strategy is to create a style that is very minimalistic/easy to look at. We want to follow web standards and techniques that will overall improve the User Experience/Interface
 
 ## Installation and Deployment Instructions
-
+1. You need to change you apache server document root to the location you store our project.
+   go to the httpd.conf
+2. Start the apache server
+3. Start mysql server and load schema(instruction below)
+4. Start you browser and go to localhost/connect.php
 ### Database Setup
 Visit the MySQL website to [download](https://dev.mysql.com/downloads/mysql/) the latest community version. Follow the instructions to install the database.
 
@@ -60,7 +64,8 @@ Configure your localhost server under the username root, and leave the password 
 
 If necessary, install the MySQL Workbench [here](https://dev.mysql.com/downloads/workbench/).
 
-Initial setup of a schema/table may be necessary (to be updated)
-
+Initial setup of a schema/table may be necessary
+In you mysql server create a schema/database called budgetapp.
+And the load this schema [sampledb.sql](sampledb.sql) in budgetapp.
 ### Deployment
 Please ensure that you are connected to the internet before your initial loading of the page, in order to fetch CDN data and have it stored into your local browser.
