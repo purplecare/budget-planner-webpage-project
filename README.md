@@ -66,6 +66,6 @@ If necessary, install the MySQL Workbench [here](https://dev.mysql.com/downloads
 
 Initial setup of a schema/table may be necessary
 In you mysql server create a schema/database called budgetapp.
-And the load this schema[sampledb.sql](sampledb.sql) in budgetapp.
+And the load this schema [sampledb.sql](sampledb.sql) in budgetapp.
 ### Deployment
 Please ensure that you are connected to the internet before your initial loading of the page, in order to fetch CDN data and have it stored into your local browser.
