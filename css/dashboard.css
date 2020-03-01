@@ -107,3 +107,34 @@ input[type=submit]{
 form{
   margin-bottom: 10px;
 }
+
+input[type=submit],
+button[type=button],
+input[type=button]{
+  border: none;
+  padding: 8px 15px 8px 15px;
+  background: var(--main_backgroundcolor);
+  color: #fff;
+  box-shadow: 1px 1px 4px #DADADA;
+  -moz-box-shadow: 1px 1px 4px #DADADA;
+  -webkit-box-shadow: 1px 1px 4px #DADADA;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+input[type=submit]:hover,
+button[type=button]:hover,
+input[type=button]:hover{
+  background: var(--main_backgroundcolor);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+input.large, select {
+  width: 80px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
