@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-//$con=mysqli_connect("localhost:3306","root","","budgetapp");
-$con=mysqli_connect("localhost:3306","trevor","","budgetapp");
+$con=mysqli_connect("localhost:3306","root","","budgetapp");
+//$con=mysqli_connect("localhost:3306","trevor","","budgetapp");
 
 ?>
 <!DOCTYPE html>
@@ -15,10 +15,10 @@ $con=mysqli_connect("localhost:3306","trevor","","budgetapp");
     <meta name="keywords" content="Budget Application">
     <meta name="author" content="Simon Fu and Trevor Siu">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/functions-dashboard.js"></script>
+    <!--<script type="text/javascript" src="../js/functions-dashboard.js"></script>-->
 
     </head>
 <body>
@@ -41,27 +41,10 @@ $con=mysqli_connect("localhost:3306","trevor","","budgetapp");
     <div id="dbupdateresult">
       <span>some message</span>
     </div>
-    <div>
+    <div class="nav-tab">
       <h1>Dashboard</h1>
       <h2>Sept, 2019</h2>
-      <form action=
-      "<?php
-      //header("Access-Control-Allow-Origin: *");
-      $category= $_POST["category"];
-      $itemname=$_POST["Items"];
-      $amount=$_POST["Amount"];
-      $sql="INSERT INTO spendingentry (category,itemname,amount) VALUES ('$category','$itemname','$amount')";
-
-      if ($con->query($sql)===TRUE){
-        echo "Success";
-        
-      }
-      else{
-        echo "$sql";
-      }
-
-       ?>"
-       method="post">
+      <form action="newItem.php" method="post">
         Category:
         <select class="dropdown-category" name="category">
           <option value="food">Food</option>
@@ -139,7 +122,7 @@ $con=mysqli_connect("localhost:3306","trevor","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='ent'";
+          $sql="SELECT itemname,amount FROM spendingentry Where category='util'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
@@ -163,14 +146,17 @@ $con=mysqli_connect("localhost:3306","trevor","","budgetapp");
       <table class="dashboard_row_items">
         <th>Items</th>
         <th>Amount</th>
-        <tr>
-          <td>Week 1 grocery</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Dinner at Joey</td>
-          <td>60</td>
-        </tr>
+        <?php
+          $sql="SELECT itemname,amount FROM spendingentry Where category='ent'";
+          $message=$con-> query($sql);
+          if ($message->num_rows>0){
+            while ( $row= $message->fetch_assoc()){
+              echo "<tr>";
+              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "</tr>";
+            }
+        }
+        ?>
       </table>
     </div>
     <div class="category-living">
