@@ -1,6 +1,8 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-$con=mysqli_connect("localhost","root","","budgetapp");
+//$con=mysqli_connect("localhost:3306","root","","budgetapp");
+$con=mysqli_connect("localhost:3306","trevor","","budgetapp");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,20 +38,23 @@ $con=mysqli_connect("localhost","root","","budgetapp");
   </div>
 
   <div class="main">
-    <div class="nav-tab">
+    <div id="dbupdateresult">
+      <span>some message</span>
+    </div>
+    <div>
       <h1>Dashboard</h1>
       <h2>Sept, 2019</h2>
       <form action=
       "<?php
-      header("Access-Control-Allow-Origin: *");
-      $con=mysqli_connect("localhost","root","","budgetapp");
+      //header("Access-Control-Allow-Origin: *");
       $category= $_POST["category"];
       $itemname=$_POST["Items"];
       $amount=$_POST["Amount"];
       $sql="INSERT INTO spendingentry (category,itemname,amount) VALUES ('$category','$itemname','$amount')";
 
       if ($con->query($sql)===TRUE){
-        echo "SUccess";
+        echo "Success";
+        
       }
       else{
         echo "$sql";
@@ -180,14 +185,17 @@ $con=mysqli_connect("localhost","root","","budgetapp");
       <table class="dashboard_row_items">
         <th>Items</th>
         <th>Amount</th>
-        <tr>
-          <td>Week 1 grocery</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>Dinner at Joey</td>
-          <td>60</td>
-        </tr>
+        <?php
+          $sql="SELECT itemname,amount FROM spendingentry Where category='liv'";
+          $message=$con-> query($sql);
+          if ($message->num_rows>0){
+            while ( $row= $message->fetch_assoc()){
+              echo "<tr>";
+              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "</tr>";
+            }
+        }
+        ?>
       </table>
     </div>
 

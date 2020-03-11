@@ -1,3 +1,14 @@
+#dbupdateresult{
+  background-color: green;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 30%;
+  width: 20%;
+  display: inline-block;
+  visibility: visible;
+  border-radius: 5px;
+
+}
 .category-food,.category-transportation,.category-ultilities,.category-entertainment,.category-living{
 
   margin-top: 10px;
