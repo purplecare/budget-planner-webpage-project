@@ -54,7 +54,8 @@ body {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 16px;
-  color: rgba(25, 23, 17, 0.6);
+  /*color: rgba(25, 23, 17, 0.6);*/
+  color: black;
   display: block;
   transition: background-color 0.3s;
 }
@@ -63,6 +64,7 @@ body {
   text-align: center;
   font-size: 60px;
   margin-bottom: 30px;
+
 }
 
 .sidenav a:not(.active):hover {
@@ -109,7 +111,10 @@ li a {
 }*/
 
 .sidenav a.active {
-  color: rgba(25, 23, 17, 0.3);
+  /*color: rgba(25, 23, 17, 0.3);*/
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .sidenav a.active:hover {

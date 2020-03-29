@@ -18,7 +18,9 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="../js/functions-dashboard.js"></script>-->
+  <script type="text/javascript" src="../js/functions-dashboard.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
 
     </head>
 <body>
@@ -32,9 +34,9 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
   <div class="sidenav">
     <div><i class="fa fa-dollar"></i></div>
     <a class="active">Dashboard</a>
-    <a href="budget.html">Budgeting</a>
-    <a href="history.html">History</a>
-    <a href="settings.html">Settings</a>
+    <a href="../budget.html">Budgeting</a>
+    <a href="../history.html">History</a>
+    <a href="../settings.html">Settings</a>
   </div>
 
   <div class="main">
@@ -44,9 +46,9 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
     <div class="nav-tab">
       <h1>Dashboard</h1>
       <h2>Sept, 2019</h2>
-      <form action="newItem.php" method="post">
+      <form  id="additem" class="ajax" method="post">
         Category:
-        <select class="dropdown-category" name="category">
+        <select class="dropdown-category" id="category" name="category" value="food">
           <option value="food">Food</option>
           <option value="trans">Transportation</option>
           <option value="util">Ultilities</option>
@@ -54,9 +56,9 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
           <option value="liv">Living</option>
         </select>
         Item Name:
-        <input class="item-name" type="text" name="Items">
+        <input class="item-name" type="text" name="name" id="name">
         Amount:
-        <input class="item-amount" type="number" name="Amount">
+        <input class="item-amount" type="number" name="amount"id="amount">
         <input id="add-button" type="submit" value="Add new items">
       </form>
     <div class="category-food">
