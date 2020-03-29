@@ -103,12 +103,16 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='trans'";
+          $sql="SELECT * FROM spendingentry Where category='trans'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
-              echo "<tr>";
-              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "<tr id=".$row["spendingentryid"].">";
+              echo
+                "<td>".$row["itemname"]."</td>
+                <td>".$row["amount"]."</td>
+                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
+                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
               echo "</tr>";
             }
         }
@@ -128,12 +132,16 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='util'";
+          $sql="SELECT * FROM spendingentry Where category='util'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
-              echo "<tr>";
-              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "<tr id=".$row["spendingentryid"].">";
+              echo
+                "<td>".$row["itemname"]."</td>
+                <td>".$row["amount"]."</td>
+                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
+                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
               echo "</tr>";
             }
         }
@@ -153,12 +161,16 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='ent'";
+          $sql="SELECT * FROM spendingentry Where category='ent'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
-              echo "<tr>";
-              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "<tr id=".$row["spendingentryid"].">";
+              echo
+                "<td>".$row["itemname"]."</td>
+                <td>".$row["amount"]."</td>
+                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
+                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
               echo "</tr>";
             }
         }
@@ -178,12 +190,16 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='liv'";
+          $sql="SELECT * FROM spendingentry Where category='liv'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
-              echo "<tr>";
-              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "<tr id=".$row["spendingentryid"].">";
+              echo
+                "<td>".$row["itemname"]."</td>
+                <td>".$row["amount"]."</td>
+                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
+                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
               echo "</tr>";
             }
         }
