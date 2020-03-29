@@ -7,6 +7,11 @@
   $itemname= $result->name;
   $amount= $result->amount;
   $sql="INSERT INTO spendingentry (category,itemname,amount) VALUES ('$category','$itemname','$amount')";
-  $con->query($sql);
+  if ($con->query($sql)===True){
+    echo "Item successfully added";
+  }
+  else{
+    echo "Something went wrong. Please try again";
+  }
 
 ?>

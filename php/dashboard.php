@@ -41,7 +41,7 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
 
   <div class="main">
     <div id="dbupdateresult">
-      <span>some message</span>
+      some message
     </div>
     <div class="nav-tab">
       <h1>Dashboard</h1>
@@ -74,12 +74,16 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <th>Items</th>
         <th>Amount</th>
         <?php
-          $sql="SELECT itemname,amount FROM spendingentry Where category='food'";
+          $sql="SELECT * FROM spendingentry Where category='food'";
           $message=$con-> query($sql);
           if ($message->num_rows>0){
             while ( $row= $message->fetch_assoc()){
-              echo "<tr>";
-              echo "<td>".$row["itemname"]."</td><td>".$row["amount"]."</td>";
+              echo "<tr id=".$row["spendingentryid"].">";
+              echo
+                "<td>".$row["itemname"]."</td>
+                <td>".$row["amount"]."</td>
+                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
+                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
               echo "</tr>";
             }
         }
