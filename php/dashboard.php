@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 $con=mysqli_connect("localhost:3306","root","","budgetapp");
 //$con=mysqli_connect("localhost:3306","trevor","","budgetapp");
-
+include 'createTable.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,13 +24,6 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
 
     </head>
 <body>
-  <!--
-  <ul>
-    <li><a href="#this">This</a></li>
-    <li><a href="#content">Content</a></li>
-    <li><a href="#will">Will</a></li>
-    <li><a href="#change">Change</a></li>
-  </ul>-->
   <div class="sidenav">
     <div><i class="fa fa-dollar"></i></div>
     <a class="active">Dashboard</a>
@@ -62,149 +55,34 @@ $con=mysqli_connect("localhost:3306","root","","budgetapp");
         <input id="add-button" type="submit" value="Add new items">
       </form>
     <div class="category-food">
-      <div class="grid-container">
-        <div class="category-text">Food</div>
-        <div class="budget-amount">Budget amount: 200</div>
-        <div class="amount-spent">Amount spent: 200</div>
-        <div class="budget-left">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <?php
-          $sql="SELECT * FROM spendingentry Where category='food'";
-          $message=$con-> query($sql);
-          if ($message->num_rows>0){
-            while ( $row= $message->fetch_assoc()){
-              echo "<tr id=".$row["spendingentryid"].">";
-              echo
-                "<td>".$row["itemname"]."</td>
-                <td>".$row["amount"]."</td>
-                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
-                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
-              echo "</tr>";
-            }
-        }
-        ?>
-      </table>
+      <?php
+       createTableHeader("food");
+       createTable("food");
+      ?>
     </div>
     <div class="category-transportation">
-      <div class="grid-container">
-        <div class="category-text">Transportation</div>
-        <div class="budget-amount">Budget amount: 200</div>
-        <div class="amount-spent">Amount spent: 200</div>
-        <div class="budget-left">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <?php
-          $sql="SELECT * FROM spendingentry Where category='trans'";
-          $message=$con-> query($sql);
-          if ($message->num_rows>0){
-            while ( $row= $message->fetch_assoc()){
-              echo "<tr id=".$row["spendingentryid"].">";
-              echo
-                "<td>".$row["itemname"]."</td>
-                <td>".$row["amount"]."</td>
-                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
-                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
-              echo "</tr>";
-            }
-        }
-        ?>
-      </table>
+      <?php
+       createTableHeader("trans");
+       createTable("trans");
+      ?>
     </div>
     <div class="category-ultilities">
-      <div class="grid-container">
-        <div class="category-text">Utilities</div>
-        <div class="budget-amount">Budget amount: 200</div>
-        <div class="amount-spent">Amount spent: 200</div>
-        <div class="budget-left">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <?php
-          $sql="SELECT * FROM spendingentry Where category='util'";
-          $message=$con-> query($sql);
-          if ($message->num_rows>0){
-            while ( $row= $message->fetch_assoc()){
-              echo "<tr id=".$row["spendingentryid"].">";
-              echo
-                "<td>".$row["itemname"]."</td>
-                <td>".$row["amount"]."</td>
-                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
-                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
-              echo "</tr>";
-            }
-        }
-        ?>
-      </table>
+      <?php
+       createTableHeader("utill");
+       createTable("util");
+      ?>
     </div>
     <div class="category-entertainment">
-      <div class="grid-container">
-        <div class="category-text">Entertainment</div>
-        <div class="budget-amount">Budget amount: 200</div>
-        <div class="amount-spent">Amount spent: 200</div>
-        <div class="budget-left">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <?php
-          $sql="SELECT * FROM spendingentry Where category='ent'";
-          $message=$con-> query($sql);
-          if ($message->num_rows>0){
-            while ( $row= $message->fetch_assoc()){
-              echo "<tr id=".$row["spendingentryid"].">";
-              echo
-                "<td>".$row["itemname"]."</td>
-                <td>".$row["amount"]."</td>
-                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
-                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
-              echo "</tr>";
-            }
-        }
-        ?>
-      </table>
+      <?php
+       createTableHeader("ent");
+       createTable("ent");
+      ?>
     </div>
     <div class="category-living">
-      <div class="grid-container">
-        <div class="category-text">Living expense</div>
-        <div class="budget-amount">Budget amount: 200</div>
-        <div class="amount-spent">Amount spent: 200</div>
-        <div class="budget-left">Budget left: 200</div>
-
-      </div>
-
-      <table class="dashboard_row_items">
-        <th>Items</th>
-        <th>Amount</th>
-        <?php
-          $sql="SELECT * FROM spendingentry Where category='liv'";
-          $message=$con-> query($sql);
-          if ($message->num_rows>0){
-            while ( $row= $message->fetch_assoc()){
-              echo "<tr id=".$row["spendingentryid"].">";
-              echo
-                "<td>".$row["itemname"]."</td>
-                <td>".$row["amount"]."</td>
-                <td><button class='edit' value=".$row["spendingentryid"].">Edit</button></td>
-                <td><button class='delete' value=".$row["spendingentryid"].">Delete</button></td>";
-              echo "</tr>";
-            }
-        }
-        ?>
-      </table>
+      <?php
+       createTableHeader("liv");
+       createTable("liv");
+      ?>
     </div>
 
   </div>
