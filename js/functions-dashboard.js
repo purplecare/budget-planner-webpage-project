@@ -23,22 +23,27 @@ $(document).ready(function(){
 		alert(this.value);
 	})
 	$("button.delete").click(function(){
-		confirm("Do you want to delete this item?");
-		var id= this.value;
-		var tr=$("#"+id);
-		$.ajax(
-			{
-				type:"POST",
-				url:"deleteItem.php",
-				data:{id:this.value},
-				success:function(id){
-					tr.remove();
-				},
-				error: function(e){
-					console.log(e.message);
+		var result=confirm("Do you want to delete this item?");
+		if (result){
+			var id= this.value;
+			var tr=$("#"+id);
+			$.ajax(
+				{
+					type:"POST",
+					url:"deleteItem.php",
+					data:{id:this.value},
+					success:function(id){
+						tr.remove();
+					},
+					error: function(e){
+						console.log(e.message);
+					}
 				}
-			}
-		)
+			)
+		}
+		else{
+
+		}
 	})
 
 
