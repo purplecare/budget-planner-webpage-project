@@ -68,7 +68,7 @@ include 'createTable.php';
     </div>
     <div class="category-ultilities">
       <?php
-       createTableHeader("utill");
+       createTableHeader("util");
        createTable("util");
       ?>
     </div>
