@@ -1,3 +1,15 @@
+#dbupdateresult{
+  background-color: green;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 30%;
+  width: 20%;
+  display: inline-block;
+  visibility: hidden;
+  border-radius: 5px;
+
+}
+
 .category-food,.category-transportation,.category-ultilities,.category-entertainment,.category-living{
 
   margin-top: 10px;
@@ -111,6 +123,11 @@ input[type=submit]{
 form{
   margin-bottom: 10px;
 }
+.delete{
+  margin-left: 10px;
+  margin-right: 10px;
+
+
 
 input[type=submit],
 button[type=button],
@@ -141,4 +158,5 @@ input.large, select {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+
 }
