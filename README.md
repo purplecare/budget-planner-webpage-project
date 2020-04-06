@@ -33,9 +33,10 @@ We will be building a **Personal Budget Web Application** that will allow users 
 ### Expected Technologies (Subject to Change)
 1. HTML
 2. CSS
-3. Javascript
-4. Database (TBD)
+3. Javascript (JQuery)
+4. Database (MySQL)
 5. RESTful API (JSON HTTP)
+6. Ajax
 
 ## UI Design Document
 
@@ -69,3 +70,34 @@ In you mysql server create a schema/database called budgetapp.
 And the load this schema [sampledb.sql](sampledb.sql) in budgetapp.
 ### Deployment
 Please ensure that you are connected to the internet before your initial loading of the page, in order to fetch CDN data and have it stored into your local browser.
+
+## Testing
+Testing is an integral part to the development of our application. We performed various types of testing including functional(Black Box) and regression tests. 
+
+### Functional Testing
+Functional testing is a type of black box testing that is used for quality assurance processes. Functions and features in our application are tested by passing in an input and then examining the output. If the output is what we expect, the test passes. Functional tests are always performed on any features that are created within a feature branch, and must be tested before it is merged onto the master. It is necessary that the functionality of that feature is tested before it is merged. However, purely performing functional tests is not enough because even if a function is acting as expected, it may perform differently or even break when integrating with other functions. This is why other tests, such as integration testing is necessary so that the logic works well with other components.
+
+### Integration Testing
+Integration testing is a type of testing that involves evaluating how well an individual modules are combined and tested as a group. It is often coupled with unit tests, as after the individual modules are tested.
+
+### Regression Testing
+The Regression Testing performed during this project is similar to integration, but was done mostly within rather than between the individual modules. Regression testing is defined as a type of software testing that confirms the recent program or code change didn't adversely affected existing features. 
+
+
+## Development / Software Process
+This section includes a description of the process that we followed for the development of this web application.
+
+### Requirements Gathering
+Requirement analysis and planning is a fundamental stage in our software process. It involves composing a set of functions that define what our application will do. This is the initial stage of the project, and is used to understand what is being built.
+
+### Design
+After our requirements has been established, we began creating mockups and formulating a UI design strategy. This phase solidifies the product's color schemes, typography, iconography, and overall atmosphere of its appearance. We chose to use a low-fidelity mockup (paper mockups) to introduce a basic model to work with. This model will then be evaluated and improved as implementation continues.
+
+### Implementation
+Features branches are a key process during development. They allow for developers to work on their own features and be isolated from modifications that are going on elsewhere.
+
+### Integration and Testing
+This refers to the testing stage where product defects are detected, fixed, and retested until the product reaches the quality standard defined in the requirements.
+
+### Deployment
+After the application is in a releasable state, the code is in the master branch and is deployed. In the deployment and installation section of this document, you are provided with instructions that will show you how to replicate the latest release. 
