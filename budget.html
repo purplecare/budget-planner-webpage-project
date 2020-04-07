@@ -32,14 +32,12 @@
 <div class="main">
   <div class="nav-tab">
     <h1>Budgeting</h1>
-    <form>
       Monthly income:
-      <input type="number" class="large" name="monthly-income" value="2500">
+      <input type="number" class="large" id="monthly-amount" name="monthly-income" placeholder="Income">
       Monthly Saving Target:
-      <input type="number" class="large" name="monthly-income" value="500">
-      <input type="submit" name="" value="Update">
-    </form>
-    <h2 style="text-align: right">Current Amount left for Budgeting= $500</h2>
+      <input type="number" class="large" id="update-amount" name="monthly-income" placeholder="Goal">
+      <input type="submit" id="update" value="Update">
+    <h2 style="text-align: right">Current Amount left for Budgeting = $<span id="budget-amount"></span> with a monthly income of $<span id="monthly-amount"></span></h2>
     <div class="category-food">
       <div class="grid-container">
         <div class="category-text">Food</div>
@@ -54,7 +52,7 @@
     </div>
     <div class="category-ultilities">
       <div class="grid-container">
-        <div class="category-text">Ultilities</div>
+        <div class="category-text">Utilities</div>
         <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
       </div>
     </div>
@@ -69,6 +67,9 @@
         <div class="category-text">Living</div>
         <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
       </div>
+    </div>
+    <div style="float:right;margin-top: 20px">
+      <button class="save" type="button" name="button">Save</button>
     </div>
     <div class="monthly-payments">
       <h1>Monthly payments</h1>
