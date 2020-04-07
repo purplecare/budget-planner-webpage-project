@@ -27,7 +27,7 @@ include 'createTable.php';
   <div class="sidenav">
     <div><i class="fa fa-dollar"></i></div>
     <a class="active">Dashboard</a>
-    <a href="../budget.html">Budgeting</a>
+    <a href="./budget.php">Budgeting</a>
     <a href="../history.html">History</a>
     <a href="../settings.html">Settings</a>
   </div>
