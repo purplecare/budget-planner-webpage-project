@@ -101,3 +101,12 @@ This refers to the testing stage where product defects are detected, fixed, and 
 
 ### Deployment
 After the application is in a releasable state, the code is in the master branch and is deployed. In the deployment and installation section of this document, you are provided with instructions that will show you how to replicate the latest release. 
+### Screenshot
+![image](https://user-images.githubusercontent.com/31968712/78722874-531f3c80-78f8-11ea-8cd6-d413537c0cf4.png)
+**Fig.1** Home Page. Users can input spendings of the current month.
+![image](https://user-images.githubusercontent.com/31968712/78722921-6e8a4780-78f8-11ea-81c9-11c757cd82a8.png)
+**Fig.2** Budget Page. Users edit the monthly budget template.
+![image](https://user-images.githubusercontent.com/31968712/78722943-7a760980-78f8-11ea-90b0-519061735c23.png)
+**Fig.3** History Page. Users can see past months summary
+![image](https://user-images.githubusercontent.com/31968712/78722957-8235ae00-78f8-11ea-88a5-b89563eeb264.png)
+**Fig.4** Setting Page. Users can edit their email and password.
