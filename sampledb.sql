@@ -28,26 +28,16 @@ CREATE TABLE `spendingentry` (
   `itemname` varchar(200) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL,
   PRIMARY KEY (`spendingentryid`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `spendingentry`
---
-
-LOCK TABLES `spendingentry` WRITE;
-/*!40000 ALTER TABLE `spendingentry` DISABLE KEYS */;
-INSERT INTO `spendingentry` VALUES (1,'food ','week 1 grocery',50),(2,'food ','Joey\'s dinner',60),(3,'trans','bus pass',75),(4,'trans','uber ',11),(5,'ent','movie',11),(6,'ent','laser tag',20),(7,'food','hot dog',12);
-/*!40000 ALTER TABLE `spendingentry` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2020-02-29 20:06:02
+);
+CREATE TABLE `budget` (
+  `income` INT NULL,
+  `savingTarget` INT NULL,
+  `budgetId` INT NOT NULL AUTO_INCREMENT,
+  `food` INT NULL,
+  `trans` INT NULL,
+  `util` INT NULL,
+  `ent` INT NULL,
+  `liv` INT NULL,
+  PRIMARY KEY (`budgetId`));
+INSERT INTO `spendingentry` VALUES (1,'food ','week 1 grocery',50),(2,'food ','Joey\'s dinner',60),(3,'trans','bus pass',75),(4,'trans','uber ',11),(5,'ent','movie',11),(6,'ent','laser tag',20),(7,'food','hot dog',12),(8,'util','hydro',50),(9,'liv ','rent',154);
+INSERT Into 'budget'  VALUES (1,2500,50,0,0,0,0,0);

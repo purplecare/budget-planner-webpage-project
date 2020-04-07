@@ -8,4 +8,22 @@ $(document).ready(function() {
 	$(document.body).on('click', '.delete-row', function() {
 		$(this).closest("tr").remove();
 	});
+	$("form.incomeSaving").on('submit',function(){
+		var income = $("#monthly-income").val();
+		var saving = $("#monthly-saving").val();
+		var data='{"income":'+income+',"saving":'+saving+'}';
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateincome.php",
+				data:{mydata:data},
+				success:function(id){
+					alert(id);
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+	})
 });

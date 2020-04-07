@@ -89,7 +89,7 @@ input[type=button]{
   border: none;
   padding: 8px 15px 8px 15px;
   background: var(--main_backgroundcolor);
-  color: #fff;
+  color: black;
   box-shadow: 1px 1px 4px #DADADA;
   -moz-box-shadow: 1px 1px 4px #DADADA;
   -webkit-box-shadow: 1px 1px 4px #DADADA;
@@ -101,7 +101,7 @@ input[type=submit]:hover,
 button[type=button]:hover,
 input[type=button]:hover{
   background: var(--main_backgroundcolor);
-  color: #fff;
+  color: black;
   cursor: pointer;
   opacity: 0.7;
 }
