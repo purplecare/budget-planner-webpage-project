@@ -27,7 +27,7 @@ include 'createTable.php';
   <div class="sidenav">
     <div><i class="fa fa-dollar"></i></div>
     <a class="active">Dashboard</a>
-    <a href="../budget.html">Budgeting</a>
+    <a href="./budget.php">Budgeting</a>
     <a href="../history.html">History</a>
     <a href="../settings.html">Settings</a>
   </div>
@@ -56,31 +56,26 @@ include 'createTable.php';
       </form>
     <div class="category-food">
       <?php
-       createTableHeader("food");
        createTable("food");
       ?>
     </div>
     <div class="category-transportation">
       <?php
-       createTableHeader("trans");
        createTable("trans");
       ?>
     </div>
     <div class="category-ultilities">
       <?php
-       createTableHeader("util");
        createTable("util");
       ?>
     </div>
     <div class="category-entertainment">
       <?php
-       createTableHeader("ent");
        createTable("ent");
       ?>
     </div>
     <div class="category-living">
       <?php
-       createTableHeader("liv");
        createTable("liv");
       ?>
     </div>

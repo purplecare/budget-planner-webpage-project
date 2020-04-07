@@ -4,7 +4,7 @@
   grid-template-rows: minmax(50px,50px);
   grid-gap: 0px;
 }
-.category-food,.category-transportation,.category-ultilities,.category-entertainment,.category-living{
+.category-food,.category-trans,.category-util,.category-ent,.category-liv{
   margin-top: 10px;
 }
 
@@ -12,16 +12,16 @@
   background-color: var(--category_food_dark);
 }
 
-.category-transportation .category-text {
+.category-trans .category-text {
   background-color: var(--category_transportation_dark);
 }
-.category-ultilities .category-text {
+.category-util .category-text {
   background-color: var(--category_ultilities_dark);
 }
-.category-entertainment .category-text {
+.category-ent .category-text {
   background-color: var(--category_entertainment_dark);
 }
-.category-living .category-text {
+.category-liv .category-text {
   background-color: var(--category_living_dark);
 }
 .category-text {
@@ -39,19 +39,19 @@
   background-color: var(--category_food_light);
 }
 
-.category-transportation .budget-amount {
+.category-trans .budget-amount {
   border-color: var(--category_transportation_dark);
   background-color: var(--category_transportation_light);
 }
-.category-ultilities .budget-amount {
+.category-util .budget-amount {
   border-color: var(--category_ultilities_dark);
   background-color: var(--category_ultilities_light);
 }
-.category-entertainment .budget-amount {
+.category-ent .budget-amount {
   border-color: var(--category_entertainment_dark);
   background-color: var(--category_entertainment_light);
 }
-.category-living .budget-amount {
+.category-liv .budget-amount {
   border-color: var(--category_living_dark);
   background-color: var(--category_living_light);
 }
@@ -69,6 +69,8 @@
   font-size: 15px;
   bottom: 0px;
   border-radius: 0px 10px 10px 0px;
+  color:black;
+
 }
 .amount-input{
   margin-left: 10px;
@@ -89,7 +91,7 @@ input[type=button]{
   border: none;
   padding: 8px 15px 8px 15px;
   background: var(--main_backgroundcolor);
-  color: #fff;
+  color: black;
   box-shadow: 1px 1px 4px #DADADA;
   -moz-box-shadow: 1px 1px 4px #DADADA;
   -webkit-box-shadow: 1px 1px 4px #DADADA;
@@ -101,7 +103,7 @@ input[type=submit]:hover,
 button[type=button]:hover,
 input[type=button]:hover{
   background: var(--main_backgroundcolor);
-  color: #fff;
+  color: black;
   cursor: pointer;
   opacity: 0.7;
 }

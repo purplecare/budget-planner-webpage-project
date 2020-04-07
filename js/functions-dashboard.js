@@ -20,7 +20,7 @@ $(document).ready(function(){
 		)
 	})
 	$("button.edit").click(function(){
-		alert(this.value);
+		alert("Just delete and add new for now :)");
 	})
 	$("button.delete").click(function(){
 		var result=confirm("Do you want to delete this item?");
@@ -41,9 +41,7 @@ $(document).ready(function(){
 				}
 			)
 		}
-		else{
 
-		}
 	})
 
 
