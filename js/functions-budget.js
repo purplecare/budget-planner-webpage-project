@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".save").click(function() {
+	/*$(".save").click(function() {
 		var sum = 0;
 		$(".amount-input").each(function() {
 			if ($(this).val()) {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		// } else {
 		// 	alert("Please input an update amount and monthly income");
 		// }
-	});
+	});*/
 	$(".add-row").click(function() {
 		var category = $(".dropdown-category").val();
 		var itemName = $(".item-name").val();
@@ -63,5 +63,126 @@ $(document).ready(function() {
 				}
 			}
 		)
+	});
+	$("#budget-food").change(function(){
+		var amount=$("#budget-food").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"food", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
 	})
+	$("#budget-trans").change(function(){
+		var amount=$("#budget-trans").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"trans", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+	$("#budget-util").change(function(){
+		var amount=$("#budget-util").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"util", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+	$("#budget-ent").change(function(){
+		var amount=$("#budget-ent").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"ent", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+	$("#budget-liv").change(function(){
+		var amount=$("#budget-liv").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"liv", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+	$("#monthly-income").change(function(){
+		var amount=$("#monthly-income").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"income", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+	$("#monthly-saving").change(function(){
+		var amount=$("#monthly-saving").val();
+		$.ajax(
+			{
+				type:"POST",
+				url:"updateBudget.php",
+				data:{category:"savingTarget", amount: amount},
+				success:function(id){
+					window.location.reload();
+				},
+				error: function(id){
+					alert(id);
+				}
+			}
+		)
+
+	})
+
+
 });

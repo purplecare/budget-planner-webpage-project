@@ -30,4 +30,17 @@
         </div>
       </div>';
   }
+  function incomeAndSaving(){
+    $con=mysqli_connect("localhost:3306","root","","budgetapp");
+    $sql= "SELECT * from budget ";
+    $result=$con-> query($sql);
+    $row=$result->fetch_assoc();
+    echo '
+    Monthly income:<input type="number" class="large" id="monthly-income" value="'.$row['income'].'">
+    Monthly Saving Target:
+    <input type="number" class="large" id="monthly-saving" value="'.$row['savingTarget'].'">';
+    $bgleft= $row['income']-$row['savingTarget']-$row['food']-$row['trans']-$row['ent']-$row['util']-$row['liv'];
+    echo '<h2 style="text-align: right">Current Amount left for Budgeting=$'.$bgleft.'</h2>';
+
+  }
  ?>
