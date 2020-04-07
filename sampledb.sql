@@ -40,4 +40,4 @@ CREATE TABLE `budget` (
   `liv` INT NULL,
   PRIMARY KEY (`budgetId`));
 INSERT INTO `spendingentry` VALUES (1,'food ','week 1 grocery',50),(2,'food ','Joey\'s dinner',60),(3,'trans','bus pass',75),(4,'trans','uber ',11),(5,'ent','movie',11),(6,'ent','laser tag',20),(7,'food','hot dog',12),(8,'util','hydro',50),(9,'liv ','rent',154);
-INSERT Into 'budget'  VALUES (1,2500,50,0,0,0,0,0);
+INSERT Into 'budget'  VALUES (1,2500,50,50,0,0,0,0);
