@@ -1,3 +1,4 @@
+<?php include 'budgetCategory.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,38 +42,16 @@
     </form>
     <?php
       $bgleft= $row['income']-$row['savingTarget']-$row['food']-$row['trans']-$row['ent']-$row['util']-$row['liv'];
-      echo '<h2 style="text-align: right">Current Amount left for Budgeting=$'.$bgleft.'</h2>'
+      echo '<h2 style="text-align: right">Current Amount left for Budgeting=$'.$bgleft.'</h2>';
+      budgetCategory('food');
+      budgetCategory('trans');
+      budgetCategory('util');
+      budgetCategory('ent');
+      budgetCategory('liv');
+
+
      ?>
-    <div class="category-food">
-      <div class="grid-container">
-        <div class="category-text">Food</div>
-        <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
-      </div>
-    </div>
-    <div class="category-transportation">
-      <div class="grid-container">
-        <div class="category-text">Transportation</div>
-        <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
-      </div>
-    </div>
-    <div class="category-ultilities">
-      <div class="grid-container">
-        <div class="category-text">Ultilities</div>
-        <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
-      </div>
-    </div>
-    <div class="category-entertainment">
-      <div class="grid-container">
-        <div class="category-text">Entertainment</div>
-        <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
-      </div>
-    </div>
-    <div class="category-living">
-      <div class="grid-container">
-        <div class="category-text">Living</div>
-        <div class="budget-amount">Target budget<input class="amount-input" type="number"></div>
-      </div>
-    </div>
+
     <div class="monthly-payments">
       <h1>Monthly payments</h1>
       <table>

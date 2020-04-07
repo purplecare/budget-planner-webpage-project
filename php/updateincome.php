@@ -6,9 +6,8 @@
   $income= $result->income;
   $saving= $result->saving;
   $sql="UPDATE budget SET income='$income',savingTarget='$saving'WHERE budgetId=1; ";
-  echo $saving;
   if ($con->query($sql)===True){
-    echo "Item successfully added";
+    echo "Updated";
   }
   else{
     echo "something wrong";
